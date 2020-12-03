@@ -14,6 +14,9 @@ function computerPlay(){
     return result;
   }
 
+  function playRound(playerSelection, computerSelection) {
+  }
+
   //Test variables
 var kevin = 10;
 var chris = 20;
