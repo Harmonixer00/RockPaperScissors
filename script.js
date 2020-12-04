@@ -3,20 +3,32 @@
 function computerPlay(){
     let result = Math.floor(Math.random() * 3);
     if(result === 0){
-        result = 'Rock';
+        result = "Rock";
     }
     else if(result === 1){
-        result = 'Paper';
+        result = "Paper";
     }
-    else{
-        result = 'Scissors';
+    else if(result === 2){
+        result = "Scissors";
     }
     return result;
   }
 
-  function playRound(playerSelection, computerSelection) {
-  }
 
-  //Test variables
+  function playRound(playerSelection, computerSelection) {
+    if(playerSelection === computerSelection){
+        outcome = "Tie Game!"
+    }
+    else{
+        outcome = "Failed"
+    }
+    return outcome
+  }
+  
+  const playerSelection = "rock";
+  const computerSelection = computerPlay();
+  console.log(playRound(playerSelection, computerSelection));
+ 
+// test variables
 var kevin = 10;
 var chris = 20;
