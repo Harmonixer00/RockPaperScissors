@@ -1,5 +1,3 @@
-
-//Randomly generates what the computer will output.
 function computerPlay(){
     let result = Math.floor(Math.random() * 3);
     if(result === 0){
@@ -14,21 +12,17 @@ function computerPlay(){
     return result;
   }
 
-
   function playRound(playerSelection, computerSelection) {
     if(playerSelection === computerSelection){
-        outcome = "Tie Game!"
-    }
-    else{
-        outcome = "Failed"
-    }
-    return outcome
+        return "Tie Game!"
+    }else return "Try again!"
+  }
+
+
+  playRound("Rock", computerPlay())
+
+  function favoriteAnimal(animal) {
+    console.log(animal + " is my favorite animal!")
   }
   
-  const playerSelection = "rock";
-  const computerSelection = computerPlay();
-  console.log(playRound(playerSelection, computerSelection));
- 
-// test variables
-var kevin = 10;
-var chris = 20;
+  favoriteAnimal('Goat')
