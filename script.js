@@ -13,14 +13,31 @@ function computerPlay(){
   }
 
   function playRound(playerSelection, computerSelection) {
-    if(playerSelection === computerSelection){
-        return "Tie Game!"
-    }else return "Try again!"
+    if(playerSelection == computerSelection) {
+      outcome = "Tie!";
+    } else if(playerSelection == "Rock" && computerSelection == "Scissors"){
+     outcome = "You win! Rock beats Scissors";
+    }else if(playerSelection == "Rock" && computerSelection == "Paper"){
+      outcome = "You lose! Paper beats Rock!";
+    } else if(playerSelection == "Paper" && computerSelection == "Rock"){
+      outcome = "You win! Paper beats Rock!";
+    }else if(playerSelection == "Paper" && computerSelection == "Scissors"){
+      outcome = "You lose! Scissors beats Paper!";
+    }else if(playerSelection == "Scissors" && computerSelection == "Paper"){
+      outcome = "You win! Scissors beats Paper!";
+    }else if (playerSelection == "Scissors" && computerSelection == "Rock"){
+      outcome = "You lose! Rock beats Scissors!";
+    }
+     return outcome
   }
+  
+  const playerSelection = "Rock";
+  const computerSelection = computerPlay();
+  console.log(playRound(playerSelection, computerSelection));
 
 
-  playRound("Rock", computerPlay())
 
+  // Test function (Delete later)
   function favoriteAnimal(animal) {
     console.log(animal + " is my favorite animal!")
   }
