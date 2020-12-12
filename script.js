@@ -35,11 +35,13 @@ function computerPlay(){
   const computerSelection = computerPlay();
   console.log(playRound(playerSelection, computerSelection));
 
-
-
-  // Test function (Delete later)
-  function favoriteAnimal(animal) {
-    console.log(animal + " is my favorite animal!")
+  function game(playerScore, computerScore){
+    if(playerScore > computerScore){
+      round = "Victory!";
+    }else round = "Defeat";
+    return round;
   }
+  console.log(game())
   
-  favoriteAnimal('Goat')
+
+  
