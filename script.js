@@ -35,10 +35,13 @@ function computerPlay(){
   const computerSelection = computerPlay();
   console.log(playRound(playerSelection, computerSelection));
 
-  function game(playerScore, computerScore){
-    if(playerScore > computerScore){
-      round = "Victory!";
-    }else round = "Defeat";
-    return round;
+  function game(){
+    let playerScore = 0;
+    let computerScore = 0;
+    for (let i = 1; i < 6; i++){
+      console.log(i)
+    }
+    
+  
   }
   console.log(game())
