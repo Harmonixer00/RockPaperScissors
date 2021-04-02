@@ -17,16 +17,23 @@ function computerPlay(){
       outcome = "Tie!";
     } else if(playerSelection == "Rock" && computerSelection == "Scissors"){
      outcome = "You win! Rock beats Scissors";
+     conclusion = "Victory";
     }else if(playerSelection == "Rock" && computerSelection == "Paper"){
       outcome = "You lose! Paper beats Rock!";
+      conclusion = "Defeat";
     } else if(playerSelection == "Paper" && computerSelection == "Rock"){
       outcome = "You win! Paper beats Rock!";
+      conclusion = "Victory";
     }else if(playerSelection == "Paper" && computerSelection == "Scissors"){
       outcome = "You lose! Scissors beats Paper!";
+      conclusion = "Defeat";
     }else if(playerSelection == "Scissors" && computerSelection == "Paper"){
       outcome = "You win! Scissors beats Paper!";
+      conclusion = "Victory";
     }else if (playerSelection == "Scissors" && computerSelection == "Rock"){
       outcome = "You lose! Rock beats Scissors!";
+      conclusion = "Defeat";
+
     }
      return outcome
   }
@@ -38,10 +45,17 @@ function computerPlay(){
   function game(){
     let playerScore = 0;
     let computerScore = 0;
-    for (let i = 1; i < 6; i++){
-      console.log(i)
+    for (let i = 0; i < 5; i++){
+      playRound(playerSelection, computerSelection);
+      if (conclusion === "Victory"){
+        playerScore ++
+      }else if (conclusion === "Defeat"){
+        computerScore ++
+      }
+      console.log(playerScore)
+      console.log(computerScore)
     }
-    
-  
+    return conclusion;
   }
+
   console.log(game())
