@@ -1,13 +1,13 @@
 function computerPlay(){
     let result = Math.floor(Math.random() * 3);
     if(result === 0){
-        result = "Rock";
+        result = "rock";
     }
     else if(result === 1){
-        result = "Paper";
+        result = "paper";
     }
     else if(result === 2){
-        result = "Scissors";
+        result = "scissors";
     }
     return result;
   }
@@ -15,22 +15,22 @@ function computerPlay(){
   function playRound(playerSelection, computerSelection) {
     if(playerSelection == computerSelection) {
       outcome = "Tie!";
-    } else if(playerSelection == "Rock" && computerSelection == "Scissors"){
+    } else if(playerSelection == "rock" && computerSelection == "scissors"){
      outcome = "You win! Rock beats Scissors";
      conclusion = "Victory";
-    }else if(playerSelection == "Rock" && computerSelection == "Paper"){
+    }else if(playerSelection == "rock" && computerSelection == "paper"){
       outcome = "You lose! Paper beats Rock!";
       conclusion = "Defeat";
-    } else if(playerSelection == "Paper" && computerSelection == "Rock"){
+    } else if(playerSelection == "paper" && computerSelection == "rock"){
       outcome = "You win! Paper beats Rock!";
       conclusion = "Victory";
-    }else if(playerSelection == "Paper" && computerSelection == "Scissors"){
+    }else if(playerSelection == "paper" && computerSelection == "scissors"){
       outcome = "You lose! Scissors beats Paper!";
       conclusion = "Defeat";
-    }else if(playerSelection == "Scissors" && computerSelection == "Paper"){
+    }else if(playerSelection == "scissors" && computerSelection == "paper"){
       outcome = "You win! Scissors beats Paper!";
       conclusion = "Victory";
-    }else if (playerSelection == "Scissors" && computerSelection == "Rock"){
+    }else if (playerSelection == "scissors" && computerSelection == "rock"){
       outcome = "You lose! Rock beats Scissors!";
       conclusion = "Defeat";
 
@@ -38,7 +38,7 @@ function computerPlay(){
      return outcome
   }
   
-  const playerSelection = "Rock";
+  const playerSelection = prompt("Make your move. Rock, Paper or Scissors").toLowerCase();
   const computerSelection = computerPlay();
   console.log(playRound(playerSelection, computerSelection));
 
