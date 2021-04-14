@@ -15,22 +15,28 @@ function computerPlay(){
   function playRound(playerSelection, computerSelection) {
     if(playerSelection == computerSelection) {
       outcome = "Tie!";
-    } else if(playerSelection == "rock" && computerSelection == "scissors"){
-     outcome = "You win! Rock beats Scissors";
-     conclusion = "Victory";
-    }else if(playerSelection == "rock" && computerSelection == "paper"){
+    }
+    else if(playerSelection == "rock" && computerSelection == "scissors"){
+      outcome = "You win! Rock beats Scissors";
+      conclusion = "Victory";
+    }
+    else if(playerSelection == "rock" && computerSelection == "paper"){
       outcome = "You lose! Paper beats Rock!";
       conclusion = "Defeat";
-    } else if(playerSelection == "paper" && computerSelection == "rock"){
+    } 
+    else if(playerSelection == "paper" && computerSelection == "rock"){
       outcome = "You win! Paper beats Rock!";
       conclusion = "Victory";
-    }else if(playerSelection == "paper" && computerSelection == "scissors"){
+    }
+    else if(playerSelection == "paper" && computerSelection == "scissors"){
       outcome = "You lose! Scissors beats Paper!";
       conclusion = "Defeat";
-    }else if(playerSelection == "scissors" && computerSelection == "paper"){
+    }
+    else if(playerSelection == "scissors" && computerSelection == "paper"){
       outcome = "You win! Scissors beats Paper!";
       conclusion = "Victory";
-    }else if (playerSelection == "scissors" && computerSelection == "rock"){
+    }
+    else if(playerSelection == "scissors" && computerSelection == "rock"){
       outcome = "You lose! Rock beats Scissors!";
       conclusion = "Defeat";
 
@@ -47,9 +53,10 @@ function computerPlay(){
     let computerScore = 0;
     for (let i = 0; i < 5; i++){
       playRound(playerSelection, computerSelection);
-      if (conclusion === "Victory"){
+      if(conclusion === "Victory"){
         playerScore ++
-      }else if (conclusion === "Defeat"){
+      }
+      else if (conclusion === "Defeat"){
         computerScore ++
       }
       console.log(playerScore)
