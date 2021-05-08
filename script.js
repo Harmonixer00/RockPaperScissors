@@ -15,6 +15,7 @@ function computerPlay(){
   function playRound(playerSelection, computerSelection) {
     if(playerSelection == computerSelection) {
       outcome = "Tie!";
+      conclusion = "Tie Game"
     }
     else if(playerSelection == "rock" && computerSelection == "scissors"){
       outcome = "You win! Rock beats Scissors";
@@ -58,6 +59,9 @@ function computerPlay(){
       }
       else if (conclusion === "Defeat"){
         computerScore ++
+      }
+      else if (conclusion === "Tie Game"){
+        return conclusion;
       }
       console.log(playerScore)
       console.log(computerScore)
